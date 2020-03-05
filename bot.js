@@ -101,6 +101,9 @@ const messageListener = message => {
        */
       sendMessage(totd[Math.floor(Math.random() * totd.length)])
     }
+    else if (message['text'.indexOf('Hey MaryAnn, who owns you') !==1){
+      sendMessage("One person can never own another. However, companies can and FIS owns me."
+    }
   }
 }
 
