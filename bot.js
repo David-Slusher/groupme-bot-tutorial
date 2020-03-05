@@ -76,22 +76,34 @@ const sendMessage = text => {
  *                           representing the message which 
  *                           was sent in the bot's group.
  */
+
+var totd = new Array("Schedule time for the people and things that bring you joy. If you perceive yourself as too busy, tell yourself that finding joy is necessary to be our best self",
+"The tighter we cling to an identity, the harder it becomes to grow beyond it.","The greatest threat to success is not failure but boredom. As habits become routine they become less satisfying and less interesting. It's the ability to keep going when work isn't exciting that makes the difference. Professionals stick to the schedule; amateurslet life get in the way.", "Motion and taking action are similar sounding ideas, but they are not the same. When in motion you are planning, strategizing, and learning. All good things, but they don't produce a result. Action is the type of behavior that delivers an outcome. Motion makes you feel like you're getting things done, but really you're only preparing. When preparation becomes a form of procrastination you need to change something.","Desire, per say, is not the root of suffering. Craving is! The key is to have wholesome intentions withoutbeing attached to their results.","Whatever you have within yourself is with you always. You won't unlearn the inner strengths you grow over time. The harder your life is and the lesssupport you're getting from external sources, the more important it is to look for those little opportunities each day to highlight a useful or enjoyable experience and consciously take itinto yourself.",  "Boundless Kindness - All joy in this world comes from wanting others to be happy, and suffering in this world comes from wanting only oneself to be happy.",
+"A Chinese proverb, 'That the birds of worry and care fly over your head, this you cannot change, but that they build nests in your hair, this you can prevent.",
+"The Stoics never promised freedom from disturbing emotions and hardships. They promised the freedom to have emotional well-being despite our problems. It's not a matter of resisting our feelings or pretending they don't exist. Examine your reactions to your day-to-day experiences. Challenge your reactions, not other people, to uproot your conditioned responses.","Conversing with strangers allows people to feel connected to the community around them. Human connectionis more important than income when it comes to happiness! So the next time you want to strike a conversation with someone you don't know, go for it! You have far more to gain than lose.",
+"Life throws us curve-balls. Don't let it throw you off track when you do mess up! The very next chance you get just do what you should do.", 
+"As virtues go, patience is a quiet one. It's often exhibited by the absence of a reaction. Having patience means being able to wait calmly in the face of frustration or adversity which is everywhere. This can make the difference between annoyance and equanimity, between worry and tranquility.","Checking in with ourselves throughout the day to make sure we are thinking kind thoughts and putting others first can go a long way in benefiting not just our relationship with others, but also our own health.", "What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others!", "Your life doesn't have to remain on the same trajectory that it is today. You can hit reset if you need to.","There are a few types or relationships with people in our lives. Those where both benefit, those where we benefit most, and those where the other person benefits most. Balance is important in this area. Evaluate the current relationships in your life. Are your closest friends moving you toward the person you wish to be, or are they holding you back?");
+
+
 const messageListener = message => {
   /* Checks that the sender of the message is a user.
    * This is done so that the bot does not respond to
    * itself.
    */
+  
+  //change to containing string "Mary Ann and return a randomly selected ToTD
   if (message['sender_type'] === 'user') {
     // Checks if the sent message contained the string 'bot'.
-    if (message['text'].indexOf('bot') !== -1) {
+    if (message['text'].indexOf('Mary Ann') !== -1) {
       /* Sends a GroupMe message as this bot to the bot's
        * group, indicating its insecurity about the topic
        * of conversation.
        */
-      sendMessage('OMG! Are you guys gossiping about me?!?!')
+      sendMessage(totd[1])
     }
   }
 }
+
 
 /* Exports the messageListener function as a function
  * which can be used outside of this bot.js file. The
