@@ -99,7 +99,7 @@ const messageListener = message => {
        * group, indicating its insecurity about the topic
        * of conversation.
        */
-      sendMessage(totd[1])
+      sendMessage(totd[Math.floor(Math.random() * totd.length)])
     }
   }
 }
